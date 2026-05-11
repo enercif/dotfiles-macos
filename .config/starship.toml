@@ -1,0 +1,227 @@
+add_newline = true
+
+format = """
+[┌─](text)\
+
+[](rosewater)\
+$os\
+$username\
+[](fg:rosewater bg:flamingo)\
+$directory\
+[](fg:flamingo bg:pink)\
+$git_branch\
+$git_status\
+[](fg:pink bg:mauve)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:mauve)\
+
+$fill\
+
+[](fg:mauve)\
+$conda\
+[](fg:red bg:mauve)\
+$docker_context\
+[](fg:maroon bg:red)\
+$cmd_duration\
+[](fg:peach bg:maroon)\
+$time\
+[](peach)\
+$line_break\
+
+[└─](text) 
+"""
+
+#PALETTE
+palette = "catppuccin_mocha"
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+#BREAK
+[line_break]
+disabled = false
+
+#DURATION
+[cmd_duration]
+min_time = 0
+format = '[ $duration ]($style)'
+style = "bg:maroon fg:crust"
+
+#USERNAME
+[username]
+show_always = true
+style_user = "bg:rosewater fg:crust"
+style_root = "bg:rosewater fg:crust"
+format = '[$user ]($style)'
+disabled = false
+
+#OS
+[os]
+format = "[ $symbol ]($style)"
+style = "bg:rosewater fg:crust"
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+#FILL
+[fill]
+symbol = "─"
+style = "text"
+
+#DIRECTORY
+[directory]
+style = "bg:flamingo fg:crust"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+
+#CONDA
+[conda]
+symbol= ""
+truncation_length = 0
+style = "bg:mauve fg:crust"
+format = '[ $symbol $environment ]($style)'
+
+#DOCKER
+[docker_context]
+symbol = ""
+style = "bg:red fg:crust"
+format = '[ $symbol $context ]($style)'
+detect_files = ["compose.yaml", "docker-compose.yaml", "DOCKERFILE"]
+
+#GIT
+[git_branch]
+symbol = ""
+style = "bg:pink fg:crust"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:pink fg:crust"
+format = '[$all_status$ahead_behind ]($style)'
+
+#TIME
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:peach fg:crust"
+format = '[  $time ]($style)'
+
+#LANGUAGES
+[c]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥"
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = ""
+style = "bg:mauve fg:crust"
+format = '[ $symbol ($version) ]($style)'

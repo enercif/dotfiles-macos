@@ -1,0 +1,2 @@
+theme = Catppuccin Mocha
+keybind = ctrl+opt+cmd+s=text:\x1b[115;7u
