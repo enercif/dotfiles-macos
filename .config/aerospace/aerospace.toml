@@ -162,6 +162,11 @@ apply-aspect-to-accordion = 'all'
     run = ['layout floating']
 
 [[on-window-detected]]
+    if.app-id = 'com.bitwarden.desktop'
+    run = ['layout floating']
+
+
+[[on-window-detected]]
     if.app-id = 'app.zen-browser.zen'
     if.window-title-regex-substring= 'extension'
     run = ['layout floating']
