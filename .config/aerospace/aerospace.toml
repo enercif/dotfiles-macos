@@ -137,6 +137,7 @@ apply-aspect-to-accordion = 'all'
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     ctrl-alt-cmd-comma = 'mode service'
     ctrl-alt-cmd-g = 'mode group'
+    ctrl-alt-cmd-r = 'mode resizing'
 
     ctrl-alt-cmd-f = 'fullscreen'
 
@@ -155,6 +156,20 @@ apply-aspect-to-accordion = 'all'
     ctrl-alt-cmd-k = ['join-with up', 'mode main']
     ctrl-alt-cmd-l = ['join-with right', 'mode main']
 
+[mode.resizing.binding]
+    esc = ['reload-config', 'mode main']
+
+    ctrl-alt-cmd-w = 'resize width +50'
+    ctrl-alt-cmd-shift-w = 'resize width -50'
+
+    ctrl-alt-cmd-h = 'resize height +50'
+    ctrl-alt-cmd-shift-h = 'resize height -50'
+
+    ctrl-alt-cmd-s = 'resize smart +50'
+    ctrl-alt-cmd-shift-s = 'resize smart -50'
+
+    ctrl-alt-cmd-o = 'resize smart-opposite +50'
+    ctrl-alt-cmd-shift-o = 'resize smart-opposite -50'
 
 # Window Rules
 [[on-window-detected]]
